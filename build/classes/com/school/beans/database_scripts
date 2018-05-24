@@ -1,0 +1,23 @@
+password: rupali1985
+use school - database name
+
+
+create table student_profile(
+student_id INT NOT NULL AUTO_INCREMENT,
+student_name varchar(100) not null,
+father_name varchar(100) not null,
+mother_name varchar(100) not null,
+date_of_birth varchar(100) not null,
+class_number varchar(100) not null,
+count_of_sibling varchar(100) not null,
+category varchar(30) not null,
+permanent_address varchar(300) not null,
+father_employment varchar(100) not null,
+mother_employment varchar(100) not null,
+previous_school_name varchar(100) not null,
+contact_number varchar(20) not null,
+identity_proof varchar(10) not null,
+physical_disability varchar(10) not null,
+hobbies varchar(200) not null,
+PRIMARY KEY(student_id)
+);

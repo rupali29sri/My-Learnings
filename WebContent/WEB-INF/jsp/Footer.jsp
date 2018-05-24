@@ -1,0 +1,1 @@
+<div align="right">Copyright &copy; school.net</div>

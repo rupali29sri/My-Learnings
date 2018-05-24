@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE tiles-definitions PUBLIC        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/jsp/Layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/Header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/Menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/Footer.jsp" />
+	</definition>
+	<definition name="loginPage" extends="base.definition">
+		<put-attribute name="title" value="School Management Application- Login Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/LoginPage.jsp" />
+	</definition>
+	<definition name="welcome.definition" extends="base.definition">
+		<put-attribute name="header" value="/WEB-INF/jsp/AfterLoginHeader.jsp" />
+		<put-attribute name="title" value="School Management Application- Welcome Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/LoginSuccessPage.jsp" />		
+	</definition>
+	<definition name="adminLoginPage" extends="welcome.definition">
+		<put-attribute name="menu" value="/WEB-INF/jsp/AdminMenu.jsp" />
+	</definition>
+	<definition name="teacherLoginPage" extends="welcome.definition">
+		<put-attribute name="menu" value="/WEB-INF/jsp/AdminMenu.jsp" />
+	</definition>
+	<definition name="studentLoginPage" extends="welcome.definition">
+		<put-attribute name="menu" value="/WEB-INF/jsp/AdminMenu.jsp" />
+	</definition>
+	<definition name="parentLoginPage" extends="welcome.definition">
+		<put-attribute name="menu" value="/WEB-INF/jsp/AdminMenu.jsp" />		
+	</definition>
+	<!--  Admin Tasks-->
+	<definition name="addStudentProfile" extends="adminLoginPage">
+		<put-attribute name="body" value="/WEB-INF/jsp/StudentProfilePage.jsp" />		
+	</definition>
+	<definition name="submitStudentProfile" extends="adminLoginPage">
+		<put-attribute name="body" value="/WEB-INF/jsp/StudentProfileSuccessPage.jsp" />		
+	</definition>
+	<definition name="viewAllStudentProfile" extends="adminLoginPage">
+		<put-attribute name="body" value="/WEB-INF/jsp/ViewAllStudentProfilePage.jsp" />		
+	</definition>
+</tiles-definitions>
